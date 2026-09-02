@@ -1,0 +1,20 @@
+{
+  "name": "@cryptocurpays/dsh-remote-tools",
+  "version": "0.1.0",
+  "description": "Out-of-tree dsh bundle: remote-host discovery (JumpServer + file providers), an SSH terminal backend, and model-facing remote tools",
+  "license": "MIT",
+  "type": "module",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "cordis.patch.yml",
+    "packages"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.base.json",
+    "test": "vitest run"
+  }
+}

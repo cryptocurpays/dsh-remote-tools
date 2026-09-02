@@ -1,0 +1,28 @@
+diff --git a/packages/terminal/terminal/src/index.ts b/packages/terminal/terminal/src/index.ts
+index d9e5444465..46f5db738c 100644
+--- a/packages/terminal/terminal/src/index.ts
++++ b/packages/terminal/terminal/src/index.ts
+@@ -173,6 +173,7 @@ export class TerminalSessionService extends Service {
+         type: request.type,
+         ...request.name !== undefined ? { name: request.name } : {},
+         ...request.cwd !== undefined ? { cwd: request.cwd } : {},
++        ...request.params !== undefined ? { params: request.params } : {},
+         signal: backendSignal,
+       })
+       signal?.throwIfAborted()
+diff --git a/packages/terminal/terminal/src/types.ts b/packages/terminal/terminal/src/types.ts
+index cbdd08d8a8..dd443e8aae 100644
+--- a/packages/terminal/terminal/src/types.ts
++++ b/packages/terminal/terminal/src/types.ts
+@@ -48,6 +48,11 @@ export interface TerminalSpawnRequest {
+   name?: string
+   /** Optional initial working directory interpreted by the backend. */
+   cwd?: string
++  /**
++   * Optional backend-owned parameters. Generic consumers and backends ignore
++   * this; a backend that understands a key (e.g. `target`) reads it.
++   */
++  params?: Record<string, string>
+ }
+ 
+ /** Fully identified request handed from the registry to a backend. */
