@@ -56,4 +56,8 @@ pnpm exec tsc --noEmit -p /Users/Jeremy/dsh-remote-tools/tsconfig.base.json
 pnpm exec vitest run --config /Users/Jeremy/dsh-remote-tools/vitest.config.ts /Users/Jeremy/dsh-remote-tools/packages
 ```
 
-Before publishing to npm, convert the `workspace:^` peer/dev dependency ranges in each `packages/*/package.json` to real versions (`@deepseek-ai/cordis@^4.0.2`, `@deepseek-ai/dsh-*@^0.1.2-alpha.4`, ...).
+Before publishing to npm, convert the `workspace:^` peer/dev dependency ranges in each `packages/*/package.json` to real versions (`@deepseek-ai/cordis@^4.0.2`, `@deepseek-ai/dsh-*@^0.1.2-alpha.4`, ...). Note that upstream has only published `0.0.1-rc.3` of the `@deepseek-ai/dsh-*` packages so far, so real-version installs must wait for an upstream release.
+
+## Mounting into a source-mode dsh checkout (this machine)
+
+To use the remote tools inside a local dsh that runs from a source checkout (`pnpm dsh web`), see the step-by-step local-mount memo: [docs/local-mount.md](docs/local-mount.md) — terminal patch, workspace-member copies, apps/cli dependencies, restart with `--patch`, and the per-upstream-upgrade maintenance routine.
