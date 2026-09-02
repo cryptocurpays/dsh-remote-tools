@@ -1,8 +1,10 @@
 /**
- * Dev-time type augmentation mirroring the upstream terminal `params`
- * extension (see patches/terminal-params.patch). It lets this bundle
- * typecheck against an UNPATCHED dsh-terminal. Remove this file once the
- * upstream PR is merged and the bundle builds against the released types.
+ * Dev-time type augmentation mirroring the terminal `params` extension
+ * (patches/terminal-params.patch), which this bundle must apply to the
+ * installed dsh-terminal because upstream does not accept external pull
+ * requests while pre-release (see docs/terminal-params-patch.md). Lets the
+ * bundle typecheck against an UNPATCHED dsh-terminal; keep it alongside the
+ * patch until upstream ships the extension itself.
  */
 declare module '@deepseek-ai/dsh-terminal' {
   interface TerminalSpawnRequest {
