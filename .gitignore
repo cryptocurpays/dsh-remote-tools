@@ -1,3 +1,4 @@
-node_modules/
+node_modules
 lib/
 .vite-remote-bundle/
+!*.md
