@@ -15,20 +15,17 @@
   },
   "files": [
     "lib/index.js",
+    "lib/index.js.map",
     "lib/types/**/*.d.ts"
   ],
   "license": "MIT",
+  "scripts": {
+    "build": "node ../../scripts/build-packages.mjs"
+  },
   "peerDependencies": {
-    "@deepseek-ai/dsh-credentials": "workspace:^",
-    "@cryptocurpays/dsh-remote-hosts": "workspace:^",
-    "@deepseek-ai/cordis": "workspace:^"
-  },
-  "dependencies": {
-    "@deepseek-ai/schemastery": "workspace:^"
-  },
-  "devDependencies": {
-    "@deepseek-ai/dsh-credentials": "workspace:^",
-    "@cryptocurpays/dsh-remote-hosts": "workspace:^",
-    "@deepseek-ai/cordis": "workspace:^"
+    "@cryptocurpays/dsh-remote-hosts": "workspace:*",
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-credentials": "*",
+    "@deepseek-ai/schemastery": "*"
   }
 }

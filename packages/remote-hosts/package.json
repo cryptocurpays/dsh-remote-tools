@@ -15,15 +15,15 @@
   },
   "files": [
     "lib/index.js",
+    "lib/index.js.map",
     "lib/types/**/*.d.ts"
   ],
   "license": "MIT",
-  "peerDependencies": {
-    "@deepseek-ai/dsh-credentials": "workspace:^",
-    "@deepseek-ai/cordis": "workspace:^"
+  "scripts": {
+    "build": "node ../../scripts/build-packages.mjs"
   },
-  "devDependencies": {
-    "@deepseek-ai/dsh-credentials": "workspace:^",
-    "@deepseek-ai/cordis": "workspace:^"
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-credentials": "*"
   }
 }

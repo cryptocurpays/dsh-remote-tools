@@ -1,7 +1,7 @@
 # Remote-host tools bundle overlay: mount the five packages beside the base.
-# Apply with:  dsh web --patch ./cordis.patch.yml
-# Requires the terminal `params` extension (patches/terminal-params.patch)
-# until it is merged upstream — see README.md.
+# Install:  dsh plugin --profile <name> add /path/to/dsh-remote-tools
+# Dev overlay:  dsh web --patch ./cordis.patch.yml
+# See docs/install.md.
 - insert:
     - id: remote-hosts
       name: '@cryptocurpays/dsh-remote-hosts'

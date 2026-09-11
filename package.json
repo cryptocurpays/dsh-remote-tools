@@ -11,10 +11,30 @@
   },
   "files": [
     "cordis.patch.yml",
-    "packages"
+    "packages",
+    "scripts/build-packages.mjs"
   ],
   "scripts": {
+    "build": "node scripts/build-packages.mjs",
+    "prepare": "node scripts/build-packages.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.base.json",
     "test": "vitest run"
+  },
+  "dependencies": {
+    "@cryptocurpays/dsh-remote-hosts": "file:./packages/remote-hosts",
+    "@cryptocurpays/dsh-remote-hosts-file": "file:./packages/remote-hosts-file",
+    "@cryptocurpays/dsh-remote-hosts-jumpserver": "file:./packages/remote-hosts-jumpserver",
+    "@cryptocurpays/dsh-terminal-ssh": "file:./packages/terminal-ssh",
+    "@cryptocurpays/dsh-tool-remote": "file:./packages/tool-remote",
+    "esbuild": "^0.25.0"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

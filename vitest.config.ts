@@ -1,6 +1,10 @@
 import { readFileSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import ts from 'typescript'
 import { defineConfig } from 'vitest/config'
+
+const configRoot = dirname(fileURLToPath(import.meta.url))
 
 /**
  * Dev-only test config. Resolution: every package name (workspace @deepseek-ai/*
@@ -20,7 +24,7 @@ const tsconfig = JSON.parse(readFileSync(new URL('./tsconfig.base.json', import.
 const alias: Record<string, string> = {}
 for (const [key, targets] of Object.entries(tsconfig.compilerOptions.paths)) {
   const target = targets[0]
-  if (target !== undefined) alias[key] = target
+  if (target !== undefined) alias[key] = resolve(configRoot, target)
 }
 
 /**
@@ -57,12 +61,12 @@ const decoratorPlugin = {
 }
 
 export default defineConfig({
-  root: '/Users/Jeremy/dsh-remote-tools',
+  root: configRoot,
   resolve: { alias },
   plugins: [decoratorPlugin],
   // The config lives outside the dsh workspace; point the vite temp cache at a
   // writable location inside it instead of the default walk-up node_modules.
-  cacheDir: '/Users/Jeremy/deepseek-harness/node_modules/.vite-remote-bundle',
+  cacheDir: resolve(configRoot, 'node_modules/.vite-remote-bundle'),
   test: {
     environment: 'node',
     include: ['packages/*/tests/**/*.spec.ts'],
