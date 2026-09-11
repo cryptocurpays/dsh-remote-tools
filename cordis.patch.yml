@@ -2,7 +2,14 @@
 # Install:  dsh plugin --profile <name> add /path/to/dsh-remote-tools
 # Dev overlay:  dsh web --patch ./cordis.patch.yml
 # See docs/install.md.
+#
+# The Web template does not ship the terminal seam; this bundle inserts it
+# so the SSH backend can register. If the profile already has a `terminal`
+# row, drop that duplicate from the profile patch.
 - insert:
+    - id: terminal
+      name: '@deepseek-ai/dsh-terminal'
+
     - id: remote-hosts
       name: '@cryptocurpays/dsh-remote-hosts'
 

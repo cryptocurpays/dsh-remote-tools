@@ -21,7 +21,7 @@ Install the bundle into a profile with `dsh plugin add` so every plugin resolves
 ```sh
 dsh --profile web-remote --from-default-profile web
 dsh plugin --profile web-remote add /path/to/dsh-remote-tools
-dsh --profile web-remote --dump-config   # expect five remote-* plugin rows
+dsh --profile web-remote --dump-config   # expect terminal + five remote-* plugin rows
 dsh --profile web-remote
 ```
 
@@ -56,6 +56,6 @@ pnpm run test   # from harness: pnpm exec vitest run --config /path/to/dsh-remot
 
 Before publishing to npm, replace `"*"` peer ranges with semver that matches the released `@deepseek-ai/dsh-*` versions you support.
 
-## Mounting into a source-mode dsh checkout (this machine)
+## Mounting into a source-mode dsh checkout
 
-To use the remote tools inside a local dsh that runs from a source checkout (`pnpm dsh web`), see the step-by-step local-mount memo: [docs/local-mount.md](docs/local-mount.md) — terminal patch, workspace-member copies, apps/cli dependencies, restart with `--patch`, and the per-upstream-upgrade maintenance routine.
+Do not copy packages into a harness tree. Build or link `dsh`, then follow [docs/install.md](docs/install.md). The old workspace-member mount is retired; [docs/local-mount.md](docs/local-mount.md) only records that.

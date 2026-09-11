@@ -33,7 +33,9 @@ Verify the composed configuration:
 dsh --profile web-remote --dump-config
 ```
 
-Expect a `# == @cryptocurpays/dsh-remote-tools` layer with five plugin rows.
+Expect a `# == @cryptocurpays/dsh-remote-tools` layer with the terminal seam plus five plugin rows.
+
+The Web template does not ship `@deepseek-ai/dsh-terminal`. This bundle inserts that row so the SSH backend can register. If you add the bundle to a profile that already has `id: terminal`, remove the duplicate from that profile's `cordis.patch.yml`.
 
 ## Run
 
