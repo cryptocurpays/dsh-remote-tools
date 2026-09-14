@@ -9,13 +9,13 @@
  * session. Credentials never appear in tool arguments or results — the
  * discovery spec carries a `CredentialRef` resolved by the backend.
  *
- * @module @zealousw/dsh-tool-remote
+ * @module @cryptocurpays/dsh-tool-remote
  */
 
 import type { Context } from '@deepseek-ai/cordis'
 import { defineTool } from '@deepseek-ai/dsh-tools'
 import type { Agent } from '@deepseek-ai/dsh-agent'
-import type {} from '@zealousw/dsh-remote-hosts'
+import type {} from '@cryptocurpays/dsh-remote-hosts'
 import type { TerminalSessionId, TerminalSpawnResult } from '@deepseek-ai/dsh-terminal'
 import type {} from '@deepseek-ai/dsh-system-prompt'
 

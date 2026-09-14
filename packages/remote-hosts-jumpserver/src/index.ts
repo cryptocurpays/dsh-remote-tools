@@ -9,13 +9,13 @@
  * the command itself, so no preset or settings configuration is required. The
  * ssh password still lives in the credentials store (`JUMPSERVER_PASSWORD`).
  *
- * @module @zealousw/dsh-remote-hosts-jumpserver
+ * @module @cryptocurpays/dsh-remote-hosts-jumpserver
  */
 
 import type { Context } from '@deepseek-ai/cordis'
 import z from '@deepseek-ai/schemastery'
 import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import type { RemoteHostProvider, RemoteHostSpec } from '@zealousw/dsh-remote-hosts'
+import type { RemoteHostProvider, RemoteHostSpec } from '@cryptocurpays/dsh-remote-hosts'
 
 /** Plugin configuration. */
 export interface Config {

@@ -1,5 +1,5 @@
 {
-  "name": "@zealousw/dsh-remote-hosts",
+  "name": "@cryptocurpays/dsh-remote-hosts",
   "description": "Remote host discovery seam (ctx.remoteHosts): resolve host references to connection specs via replaceable providers",
   "version": "0.1.0",
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "name": "@zealousw/dsh-terminal-ssh",
+  "name": "@cryptocurpays/dsh-terminal-ssh",
   "description": "Generic SSH PTY backend for the DeepSeek Harness terminal seam: resolves host specs via ctx.remoteHosts and spawns system ssh",
   "version": "0.1.0",
   "type": "module",
@@ -32,7 +32,7 @@
     "build": "node ../../scripts/build-packages.mjs"
   },
   "peerDependencies": {
-    "@zealousw/dsh-remote-hosts": "^0.1.0",
+    "@cryptocurpays/dsh-remote-hosts": "^0.1.0",
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-agent": "*",
     "@deepseek-ai/dsh-credentials": "*",

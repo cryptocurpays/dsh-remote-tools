@@ -1,5 +1,5 @@
 {
-  "name": "@zealousw/dsh-tool-remote",
+  "name": "@cryptocurpays/dsh-tool-remote",
   "description": "Model-facing remote host tools: search discovery providers, open persistent ssh sessions, and run one-shot remote commands",
   "version": "0.1.0",
   "type": "module",
@@ -32,7 +32,7 @@
     "build": "node ../../scripts/build-packages.mjs"
   },
   "peerDependencies": {
-    "@zealousw/dsh-remote-hosts": "^0.1.0",
+    "@cryptocurpays/dsh-remote-hosts": "^0.1.0",
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-agent": "*",
     "@deepseek-ai/dsh-llm": "*",

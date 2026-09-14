@@ -3,7 +3,7 @@ import { mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { Context } from '@deepseek-ai/cordis'
-import RemoteHostDirectory from '@zealousw/dsh-remote-hosts'
+import RemoteHostDirectory from '@cryptocurpays/dsh-remote-hosts'
 import * as FileProvider from '../src/index.ts'
 
 const HOSTS_YAML = `hosts:

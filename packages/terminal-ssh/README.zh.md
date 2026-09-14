@@ -3,7 +3,7 @@ description: "终端 seam 的通用 SSH PTY 后端：启动系统 ssh 二进制�
 kind: "package-reference"
 ---
 
-# @zealousw/dsh-terminal-ssh
+# @cryptocurpays/dsh-terminal-ssh
 
 [English](README.md) | 中文
 
@@ -28,7 +28,7 @@ kind: "package-reference"
 
 ```yaml
 - id: terminal-ssh
-  name: '@zealousw/dsh-terminal-ssh'
+  name: '@cryptocurpays/dsh-terminal-ssh'
   config:
     backendType: ssh            # registry type (default)
     sshPath: ssh                # SSH executable

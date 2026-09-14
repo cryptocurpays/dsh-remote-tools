@@ -3,13 +3,13 @@ description: "JumpServer discovery provider for ctx.remoteHosts: parses the web-
 kind: "package-reference"
 ---
 
-# @zealousw/dsh-remote-hosts-jumpserver
+# @cryptocurpays/dsh-remote-hosts-jumpserver
 
 English | [中文](README.zh.md)
 
 ## Summary
 
-Service Provider for the `@zealousw/dsh-remote-hosts` discovery seam: the plugin parses the SSH connect command the JumpServer web UI copies into a `RemoteHostSpec`. The username is the connect-token-bearing part before `@`; the gateway host and port come from the command itself, so no preset or settings configuration is required. The ssh password still lives in the credentials store (`JUMPSERVER_PASSWORD` by default).
+Service Provider for the `@cryptocurpays/dsh-remote-hosts` discovery seam: the plugin parses the SSH connect command the JumpServer web UI copies into a `RemoteHostSpec`. The username is the connect-token-bearing part before `@`; the gateway host and port come from the command itself, so no preset or settings configuration is required. The ssh password still lives in the credentials store (`JUMPSERVER_PASSWORD` by default).
 
 No invariant companion is published because the provider is a pure command parser: every parse and resolve path is validated inline, so no independent runtime snapshot exists for a companion to check.
 
@@ -28,7 +28,7 @@ No invariant companion is published because the provider is a pure command parse
 
 ```yaml
 - id: remote-hosts-jumpserver
-  name: '@zealousw/dsh-remote-hosts-jumpserver'
+  name: '@cryptocurpays/dsh-remote-hosts-jumpserver'
   config:
     port: 22222      # default port when the connect command omits -p
     tokenRef: JUMPSERVER_PASSWORD  # CredentialRef for the ssh password

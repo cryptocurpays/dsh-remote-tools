@@ -3,7 +3,7 @@ description: "Model-facing remote host tools over the discovery and transport se
 kind: "package-reference"
 ---
 
-# @zealousw/dsh-tool-remote
+# @cryptocurpays/dsh-tool-remote
 
 English | [中文](README.zh.md)
 

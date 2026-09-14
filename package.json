@@ -1,5 +1,5 @@
 {
-  "name": "@zealousw/dsh-remote-tools",
+  "name": "@cryptocurpays/dsh-remote-tools",
   "version": "0.1.0",
   "description": "Out-of-tree dsh bundle: remote-host discovery (JumpServer + file providers), an SSH terminal backend, and model-facing remote tools",
   "license": "MIT",
@@ -29,11 +29,11 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@zealousw/dsh-remote-hosts": "workspace:*",
-    "@zealousw/dsh-remote-hosts-file": "workspace:*",
-    "@zealousw/dsh-remote-hosts-jumpserver": "workspace:*",
-    "@zealousw/dsh-terminal-ssh": "workspace:*",
-    "@zealousw/dsh-tool-remote": "workspace:*"
+    "@cryptocurpays/dsh-remote-hosts": "workspace:*",
+    "@cryptocurpays/dsh-remote-hosts-file": "workspace:*",
+    "@cryptocurpays/dsh-remote-hosts-jumpserver": "workspace:*",
+    "@cryptocurpays/dsh-terminal-ssh": "workspace:*",
+    "@cryptocurpays/dsh-tool-remote": "workspace:*"
   },
   "devDependencies": {
     "esbuild": "^0.25.0",

@@ -7,7 +7,7 @@
  * providers such as a JumpServer connect-command parser or a pass-store
  * lookup decide where host references come from; this service only routes.
  *
- * @module @zealousw/dsh-remote-hosts
+ * @module @cryptocurpays/dsh-remote-hosts
  */
 
 import { Context, Service } from '@deepseek-ai/cordis'

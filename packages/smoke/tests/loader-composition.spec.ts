@@ -25,11 +25,11 @@ import TerminalSessionService from '@deepseek-ai/dsh-terminal'
 import SubprocessRuntime from '@deepseek-ai/dsh-subprocess'
 import { MemoryCredentials } from '../../remote-hosts-jumpserver/tests/memory.ts'
 
-import RemoteHostDirectory from '@zealousw/dsh-remote-hosts'
-import * as Jumpserver from '@zealousw/dsh-remote-hosts-jumpserver'
-import * as FileProvider from '@zealousw/dsh-remote-hosts-file'
-import * as TerminalSsh from '@zealousw/dsh-terminal-ssh'
-import * as ToolRemote from '@zealousw/dsh-tool-remote'
+import RemoteHostDirectory from '@cryptocurpays/dsh-remote-hosts'
+import * as Jumpserver from '@cryptocurpays/dsh-remote-hosts-jumpserver'
+import * as FileProvider from '@cryptocurpays/dsh-remote-hosts-file'
+import * as TerminalSsh from '@cryptocurpays/dsh-terminal-ssh'
+import * as ToolRemote from '@cryptocurpays/dsh-tool-remote'
 
 let root: string | undefined
 let context: Context | undefined
@@ -56,13 +56,13 @@ describe('dsh-remote-tools real Loader composition', () => {
       "- name: '@deepseek-ai/dsh-subprocess'",
       "- name: '@deepseek-ai/dsh-credentials'",
       // The bundle's own overlay rows (cordis.patch.yml).
-      "- name: '@zealousw/dsh-remote-hosts'",
-      "- name: '@zealousw/dsh-remote-hosts-jumpserver'",
-      "- name: '@zealousw/dsh-remote-hosts-file'",
+      "- name: '@cryptocurpays/dsh-remote-hosts'",
+      "- name: '@cryptocurpays/dsh-remote-hosts-jumpserver'",
+      "- name: '@cryptocurpays/dsh-remote-hosts-file'",
       `  config:`,
       `    path: ${JSON.stringify(emptyHosts)}`,
-      "- name: '@zealousw/dsh-terminal-ssh'",
-      "- name: '@zealousw/dsh-tool-remote'",
+      "- name: '@cryptocurpays/dsh-terminal-ssh'",
+      "- name: '@cryptocurpays/dsh-tool-remote'",
       '',
     ].join('\n'))
 
@@ -77,11 +77,11 @@ describe('dsh-remote-tools real Loader composition', () => {
       ['@deepseek-ai/dsh-terminal', TerminalSessionService],
       ['@deepseek-ai/dsh-subprocess', SubprocessRuntime],
       ['@deepseek-ai/dsh-credentials', MemoryCredentials],
-      ['@zealousw/dsh-remote-hosts', RemoteHostDirectory],
-      ['@zealousw/dsh-remote-hosts-jumpserver', Jumpserver],
-      ['@zealousw/dsh-remote-hosts-file', FileProvider],
-      ['@zealousw/dsh-terminal-ssh', TerminalSsh],
-      ['@zealousw/dsh-tool-remote', ToolRemote],
+      ['@cryptocurpays/dsh-remote-hosts', RemoteHostDirectory],
+      ['@cryptocurpays/dsh-remote-hosts-jumpserver', Jumpserver],
+      ['@cryptocurpays/dsh-remote-hosts-file', FileProvider],
+      ['@cryptocurpays/dsh-terminal-ssh', TerminalSsh],
+      ['@cryptocurpays/dsh-tool-remote', ToolRemote],
     ])
     context.loader.internal = {
       version: 'v2',

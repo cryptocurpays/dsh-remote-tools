@@ -5,7 +5,7 @@
  * entry's `tokenRef` names a credential in the credentials store, resolved by
  * the transport at the password prompt, so the model never sees a secret.
  *
- * @module @zealousw/dsh-remote-hosts-file
+ * @module @cryptocurpays/dsh-remote-hosts-file
  */
 
 import type { Context } from '@deepseek-ai/cordis'
@@ -15,7 +15,7 @@ import { join } from 'node:path'
 import { parseDocument } from 'yaml'
 import { resolveDshHome } from '@deepseek-ai/dsh-home-paths'
 import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import type { RemoteHostProvider, RemoteHostSpec } from '@zealousw/dsh-remote-hosts'
+import type { RemoteHostProvider, RemoteHostSpec } from '@cryptocurpays/dsh-remote-hosts'
 
 /** One static host entry from the document. */
 export interface HostEntry {

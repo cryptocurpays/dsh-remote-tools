@@ -1,4 +1,4 @@
-# @zealousw/dsh-remote-tools
+# @cryptocurpays/dsh-remote-tools
 
 Out-of-tree dsh bundle: **remote-host tools** — discovery, an SSH terminal backend, and model-facing tools — mounted beside the shipped dsh profiles instead of inside the upstream tree. This keeps upstream upgrades cheap: the bundle only tracks the public seams it uses, never the upstream codebase's internal structure.
 
@@ -20,12 +20,12 @@ Install the bundle into a profile with `dsh plugin add` so every plugin resolves
 
 ```sh
 dsh --profile web-remote --from-default-profile web --dump-config   # create profile, print, exit (no remote-* rows yet)
-dsh plugin --profile web-remote add @zealousw/dsh-remote-tools
+dsh plugin --profile web-remote add @cryptocurpays/dsh-remote-tools
 dsh --profile web-remote --dump-config   # optional: expect terminal + five remote-* plugin rows
 dsh --profile web-remote
 ```
 
-npm scope is `@zealousw`; the GitHub repository stays `cryptocurpays/dsh-remote-tools`. Before the npm release, install from git instead: `dsh plugin --profile web-remote add github:cryptocurpays/dsh-remote-tools`.
+Before the npm release, install from git: `dsh plugin --profile web-remote add github:cryptocurpays/dsh-remote-tools`.
 
 Step-by-step notes: [docs/install.md](docs/install.md). The root package's `prepare` script transpiles each plugin to `lib/index.js` during install.
 
@@ -42,7 +42,7 @@ dsh web --patch /path/to/dsh-remote-tools/cordis.patch.yml
 1. Pull the new dsh into your environment.
 2. Run this bundle's checks (below).
 3. Fix only if a seam API you use changed (`ctx.tools`, `ctx.terminals`, `ctx.credentials`, `ctx.systemPrompt`) — rare and usually one call site.
-4. Re-install or update the profile bundle: `dsh plugin --profile web-remote update @zealousw/dsh-remote-tools`.
+4. Re-install or update the profile bundle: `dsh plugin --profile web-remote update @cryptocurpays/dsh-remote-tools`.
 
 ## Development
 

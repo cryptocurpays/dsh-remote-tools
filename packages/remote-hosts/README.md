@@ -3,7 +3,7 @@ description: "Remote-host discovery seam (ctx.remoteHosts): provider registry, h
 kind: "package-reference"
 ---
 
-# @zealousw/dsh-remote-hosts
+# @cryptocurpays/dsh-remote-hosts
 
 English | [中文](README.zh.md)
 
@@ -17,11 +17,11 @@ This package owns the Service Definition role of the remote-host discovery capab
 
 | Package | Role |
 |---|---|
-| `@zealousw/dsh-remote-hosts` (this) | Service Definition: provider registry, resolution, known-host dictionary, live-session map |
-| `@zealousw/dsh-remote-hosts-jumpserver` | Provider: parses pasted JumpServer SSH connect commands |
-| `@zealousw/dsh-remote-hosts-file` | Provider: static test servers from `~/.dsh/remote-hosts.yaml` |
-| `@zealousw/dsh-terminal-ssh` | Transport: SSH PTY backend for `ctx.terminals` |
-| `@zealousw/dsh-tool-remote` | Consumer: the model-facing `remote_search` / `remote_open` / `remote_exec` / `remote_close` tools |
+| `@cryptocurpays/dsh-remote-hosts` (this) | Service Definition: provider registry, resolution, known-host dictionary, live-session map |
+| `@cryptocurpays/dsh-remote-hosts-jumpserver` | Provider: parses pasted JumpServer SSH connect commands |
+| `@cryptocurpays/dsh-remote-hosts-file` | Provider: static test servers from `~/.dsh/remote-hosts.yaml` |
+| `@cryptocurpays/dsh-terminal-ssh` | Transport: SSH PTY backend for `ctx.terminals` |
+| `@cryptocurpays/dsh-tool-remote` | Consumer: the model-facing `remote_search` / `remote_open` / `remote_exec` / `remote_close` tools |
 
 A `RemoteHostSpec` carries only non-secret connection facts (`name`, `host`, `port`, optional `username`) plus a `CredentialRef`; the credential value never enters the directory.
 

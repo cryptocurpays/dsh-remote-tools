@@ -7,7 +7,7 @@
  * bash backend installs. The access token is written to the PTY when ssh asks
  * for a password and never appears in argv, tool arguments, results, or logs.
  *
- * @module @zealousw/dsh-terminal-ssh
+ * @module @cryptocurpays/dsh-terminal-ssh
  */
 
 import { Buffer } from 'node:buffer'

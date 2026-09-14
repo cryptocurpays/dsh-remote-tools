@@ -12,6 +12,6 @@ autoInstallPeers: false
 peerDependencyRules:
   allowAny:
     - '@deepseek-ai/*'
-    - '@zealousw/*'
+    - '@cryptocurpays/*'
   ignoreMissing:
     - '@deepseek-ai/*'

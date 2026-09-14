@@ -1,5 +1,5 @@
 {
-  "name": "@zealousw/dsh-remote-hosts-jumpserver",
+  "name": "@cryptocurpays/dsh-remote-hosts-jumpserver",
   "description": "JumpServer discovery provider for ctx.remoteHosts: parses web-UI connect commands and configured presets into RemoteHostSpecs",
   "version": "0.1.0",
   "type": "module",
@@ -32,7 +32,7 @@
     "build": "node ../../scripts/build-packages.mjs"
   },
   "peerDependencies": {
-    "@zealousw/dsh-remote-hosts": "^0.1.0",
+    "@cryptocurpays/dsh-remote-hosts": "^0.1.0",
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-credentials": "*",
     "@deepseek-ai/schemastery": "*"

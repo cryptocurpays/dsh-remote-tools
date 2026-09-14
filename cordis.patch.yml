@@ -1,5 +1,5 @@
 # Remote-host tools bundle overlay: mount the five packages beside the base.
-# Install:  dsh plugin --profile <name> add @zealousw/dsh-remote-tools
+# Install:  dsh plugin --profile <name> add @cryptocurpays/dsh-remote-tools
 # Dev overlay:  dsh web --patch ./cordis.patch.yml
 # See docs/install.md.
 #
@@ -11,16 +11,16 @@
       name: '@deepseek-ai/dsh-terminal'
 
     - id: remote-hosts
-      name: '@zealousw/dsh-remote-hosts'
+      name: '@cryptocurpays/dsh-remote-hosts'
 
     - id: remote-hosts-jumpserver
-      name: '@zealousw/dsh-remote-hosts-jumpserver'
+      name: '@cryptocurpays/dsh-remote-hosts-jumpserver'
 
     - id: remote-hosts-file
-      name: '@zealousw/dsh-remote-hosts-file'
+      name: '@cryptocurpays/dsh-remote-hosts-file'
 
     - id: terminal-ssh
-      name: '@zealousw/dsh-terminal-ssh'
+      name: '@cryptocurpays/dsh-terminal-ssh'
 
     - id: tool-remote
-      name: '@zealousw/dsh-tool-remote'
+      name: '@cryptocurpays/dsh-tool-remote'

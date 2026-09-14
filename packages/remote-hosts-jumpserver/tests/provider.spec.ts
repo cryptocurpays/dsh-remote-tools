@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { Context } from '@deepseek-ai/cordis'
 import { MemoryCredentials } from './memory.ts'
-import RemoteHostDirectory from '@zealousw/dsh-remote-hosts'
+import RemoteHostDirectory from '@cryptocurpays/dsh-remote-hosts'
 import * as JumpserverProvider from '../src/index.ts'
 
 /** Boot discovery + credentials + jumpserver provider. */

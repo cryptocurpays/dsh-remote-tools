@@ -8,7 +8,7 @@ const configRoot = dirname(fileURLToPath(import.meta.url))
 
 /**
  * Dev-only test config. Resolution: every package name (workspace @deepseek-ai/*
- * AND this bundle's own @zealousw/*) maps to SOURCE through a raw alias
+ * AND this bundle's own @cryptocurpays/*) maps to SOURCE through a raw alias
  * map built from tsconfig.base.json. A plain resolve.alias applies to every
  * importing file regardless of the vite root, so workspace source files pulled
  * into the graph never fall back to per-package node_modules built-lib links.

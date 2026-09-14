@@ -8,19 +8,19 @@ importers:
 
   .:
     dependencies:
-      '@zealousw/dsh-remote-hosts':
+      '@cryptocurpays/dsh-remote-hosts':
         specifier: workspace:*
         version: link:packages/remote-hosts
-      '@zealousw/dsh-remote-hosts-file':
+      '@cryptocurpays/dsh-remote-hosts-file':
         specifier: workspace:*
         version: link:packages/remote-hosts-file
-      '@zealousw/dsh-remote-hosts-jumpserver':
+      '@cryptocurpays/dsh-remote-hosts-jumpserver':
         specifier: workspace:*
         version: link:packages/remote-hosts-jumpserver
-      '@zealousw/dsh-terminal-ssh':
+      '@cryptocurpays/dsh-terminal-ssh':
         specifier: workspace:*
         version: link:packages/terminal-ssh
-      '@zealousw/dsh-tool-remote':
+      '@cryptocurpays/dsh-tool-remote':
         specifier: workspace:*
         version: link:packages/tool-remote
     devDependencies:

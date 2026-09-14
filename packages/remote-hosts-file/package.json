@@ -1,5 +1,5 @@
 {
-  "name": "@zealousw/dsh-remote-hosts-file",
+  "name": "@cryptocurpays/dsh-remote-hosts-file",
   "description": "File-backed discovery provider for ctx.remoteHosts: static test servers listed in a YAML document (name, host, port, username, tokenRef) become resolvable host references",
   "version": "0.1.0",
   "type": "module",
@@ -35,7 +35,7 @@
     "yaml": "^2.9.0"
   },
   "peerDependencies": {
-    "@zealousw/dsh-remote-hosts": "^0.1.0",
+    "@cryptocurpays/dsh-remote-hosts": "^0.1.0",
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-credentials": "*",
     "@deepseek-ai/dsh-home-paths": "*",
