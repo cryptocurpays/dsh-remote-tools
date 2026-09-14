@@ -3,7 +3,7 @@ description: "面向模型的远程主机工具，建立在发现 seam 与传输
 kind: "package-reference"
 ---
 
-# @cryptocurpays/dsh-tool-remote
+# @zealousw/dsh-tool-remote
 
 [English](README.md) | 中文
 

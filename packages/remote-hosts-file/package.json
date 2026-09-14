@@ -1,5 +1,5 @@
 {
-  "name": "@cryptocurpays/dsh-remote-hosts-file",
+  "name": "@zealousw/dsh-remote-hosts-file",
   "description": "File-backed discovery provider for ctx.remoteHosts: static test servers listed in a YAML document (name, host, port, username, tokenRef) become resolvable host references",
   "version": "0.1.0",
   "type": "module",
@@ -19,6 +19,15 @@
     "lib/types/**/*.d.ts"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptocurpays/dsh-remote-tools.git",
+    "directory": "packages/remote-hosts-file"
+  },
   "scripts": {
     "build": "node ../../scripts/build-packages.mjs"
   },
@@ -26,7 +35,7 @@
     "yaml": "^2.9.0"
   },
   "peerDependencies": {
-    "@cryptocurpays/dsh-remote-hosts": "workspace:*",
+    "@zealousw/dsh-remote-hosts": "^0.1.0",
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-credentials": "*",
     "@deepseek-ai/dsh-home-paths": "*",

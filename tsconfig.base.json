@@ -1260,19 +1260,19 @@
       "@deepseek-ai/dsh-workspace/invariant": [
         "/Users/Jeremy/deepseek-harness/./packages/workspace/workspace/src/invariant.ts"
       ],
-      "@cryptocurpays/dsh-remote-hosts": [
+      "@zealousw/dsh-remote-hosts": [
         "./packages/remote-hosts/src/index.ts"
       ],
-      "@cryptocurpays/dsh-remote-hosts-jumpserver": [
+      "@zealousw/dsh-remote-hosts-jumpserver": [
         "./packages/remote-hosts-jumpserver/src/index.ts"
       ],
-      "@cryptocurpays/dsh-remote-hosts-file": [
+      "@zealousw/dsh-remote-hosts-file": [
         "./packages/remote-hosts-file/src/index.ts"
       ],
-      "@cryptocurpays/dsh-terminal-ssh": [
+      "@zealousw/dsh-terminal-ssh": [
         "./packages/terminal-ssh/src/index.ts"
       ],
-      "@cryptocurpays/dsh-tool-remote": [
+      "@zealousw/dsh-tool-remote": [
         "./packages/tool-remote/src/index.ts"
       ],
       "yaml": [

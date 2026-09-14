@@ -3,13 +3,13 @@ description: "ctx.remoteHosts 的 JumpServer 发现 provider：把 Web UI 的连
 kind: "package-reference"
 ---
 
-# @cryptocurpays/dsh-remote-hosts-jumpserver
+# @zealousw/dsh-remote-hosts-jumpserver
 
 [English](README.md) | 中文
 
 ## 概述
 
-`@cryptocurpays/dsh-remote-hosts` 发现 seam 的 Service Provider：本插件把 JumpServer Web UI 复制的 SSH 连接命令解析为 `RemoteHostSpec`。用户名是 `@` 之前携带连接令牌的部分；网关主机与端口来自命令本身，因此无需任何 preset 或 settings 配置。ssh 密码仍存放在凭据存储中（默认 `JUMPSERVER_PASSWORD`）。
+`@zealousw/dsh-remote-hosts` 发现 seam 的 Service Provider：本插件把 JumpServer Web UI 复制的 SSH 连接命令解析为 `RemoteHostSpec`。用户名是 `@` 之前携带连接令牌的部分；网关主机与端口来自命令本身，因此无需任何 preset 或 settings 配置。ssh 密码仍存放在凭据存储中（默认 `JUMPSERVER_PASSWORD`）。
 
 不发布不变式 companion：本 provider 是纯命令解析器，每条解析与解析路径都在内联校验，不存在可供 companion 核对的独立运行时快照。
 
@@ -28,7 +28,7 @@ kind: "package-reference"
 
 ```yaml
 - id: remote-hosts-jumpserver
-  name: '@cryptocurpays/dsh-remote-hosts-jumpserver'
+  name: '@zealousw/dsh-remote-hosts-jumpserver'
   config:
     port: 22222      # default port when the connect command omits -p
     tokenRef: JUMPSERVER_PASSWORD  # CredentialRef for the ssh password

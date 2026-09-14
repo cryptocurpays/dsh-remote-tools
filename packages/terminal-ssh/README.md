@@ -3,7 +3,7 @@ description: "Generic SSH PTY backend for the terminal seam: spawns the system s
 kind: "package-reference"
 ---
 
-# @cryptocurpays/dsh-terminal-ssh
+# @zealousw/dsh-terminal-ssh
 
 English | [中文](README.zh.md)
 
@@ -28,7 +28,7 @@ No invariant companion is published because the backend session state machine is
 
 ```yaml
 - id: terminal-ssh
-  name: '@cryptocurpays/dsh-terminal-ssh'
+  name: '@zealousw/dsh-terminal-ssh'
   config:
     backendType: ssh            # registry type (default)
     sshPath: ssh                # SSH executable

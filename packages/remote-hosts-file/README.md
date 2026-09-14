@@ -3,13 +3,13 @@ description: "File-backed discovery provider for ctx.remoteHosts: static test se
 kind: "package-reference"
 ---
 
-# @cryptocurpays/dsh-remote-hosts-file
+# @zealousw/dsh-remote-hosts-file
 
 English | [中文](README.zh.md)
 
 ## Summary
 
-Service Provider for the `@cryptocurpays/dsh-remote-hosts` discovery seam: static test servers listed in a YAML document (`name`, `host`, `port`, `username`, `tokenRef`) become resolvable host references, so `remote_open(hostRef: "test01")` works without a pasted connect command. Passwords never live in the document — each entry's `tokenRef` names a credential in the credentials store, resolved by the transport at the password prompt, so the model never sees a secret.
+Service Provider for the `@zealousw/dsh-remote-hosts` discovery seam: static test servers listed in a YAML document (`name`, `host`, `port`, `username`, `tokenRef`) become resolvable host references, so `remote_open(hostRef: "test01")` works without a pasted connect command. Passwords never live in the document — each entry's `tokenRef` names a credential in the credentials store, resolved by the transport at the password prompt, so the model never sees a secret.
 
 No invariant companion is published because the provider validates every document entry at load and keeps no independent runtime state a companion could cross-check.
 
@@ -28,7 +28,7 @@ No invariant companion is published because the provider validates every documen
 
 ```yaml
 - id: remote-hosts-file
-  name: '@cryptocurpays/dsh-remote-hosts-file'
+  name: '@zealousw/dsh-remote-hosts-file'
   config:
     path: ~/.dsh/remote-hosts.yaml   # default: $DSH_HOME/remote-hosts.yaml
 ```

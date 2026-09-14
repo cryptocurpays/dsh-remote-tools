@@ -6,7 +6,7 @@
 
 ```sh
 dsh --profile web-remote --from-default-profile web --dump-config
-dsh plugin --profile web-remote add /path/to/dsh-remote-tools
+dsh plugin --profile web-remote add github:cryptocurpays/dsh-remote-tools
 dsh --profile web-remote
 ```
 

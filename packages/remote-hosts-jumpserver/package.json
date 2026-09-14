@@ -1,5 +1,5 @@
 {
-  "name": "@cryptocurpays/dsh-remote-hosts-jumpserver",
+  "name": "@zealousw/dsh-remote-hosts-jumpserver",
   "description": "JumpServer discovery provider for ctx.remoteHosts: parses web-UI connect commands and configured presets into RemoteHostSpecs",
   "version": "0.1.0",
   "type": "module",
@@ -19,11 +19,20 @@
     "lib/types/**/*.d.ts"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptocurpays/dsh-remote-tools.git",
+    "directory": "packages/remote-hosts-jumpserver"
+  },
   "scripts": {
     "build": "node ../../scripts/build-packages.mjs"
   },
   "peerDependencies": {
-    "@cryptocurpays/dsh-remote-hosts": "workspace:*",
+    "@zealousw/dsh-remote-hosts": "^0.1.0",
     "@deepseek-ai/cordis": "*",
     "@deepseek-ai/dsh-credentials": "*",
     "@deepseek-ai/schemastery": "*"

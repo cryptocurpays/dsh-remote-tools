@@ -7,7 +7,7 @@ import AgentRegistry from '@deepseek-ai/dsh-agent'
 import type { Agent } from '@deepseek-ai/dsh-agent'
 import { Session, SessionId } from '@deepseek-ai/dsh-session'
 import { credentialRef } from '@deepseek-ai/dsh-credentials'
-import RemoteHostDirectory, { type RemoteHostSpec } from '@cryptocurpays/dsh-remote-hosts'
+import RemoteHostDirectory, { type RemoteHostSpec } from '@zealousw/dsh-remote-hosts'
 import TerminalSessionService from '@deepseek-ai/dsh-terminal'
 import type { TerminalBackend, TerminalBackendSession, TerminalReadRequest, TerminalReadResult, TerminalSendOperation, TerminalSendRead, TerminalSendRequest, TerminalSendResult, TerminalSessionStatus, TerminalSignal, TerminalSignalResult } from '@deepseek-ai/dsh-terminal'
 

@@ -1,9 +1,17 @@
 {
-  "name": "@cryptocurpays/dsh-remote-tools",
+  "name": "@zealousw/dsh-remote-tools",
   "version": "0.1.0",
   "description": "Out-of-tree dsh bundle: remote-host discovery (JumpServer + file providers), an SSH terminal backend, and model-facing remote tools",
   "license": "MIT",
   "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptocurpays/dsh-remote-tools.git"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
@@ -11,30 +19,25 @@
   },
   "files": [
     "cordis.patch.yml",
-    "packages",
-    "scripts/build-packages.mjs"
+    "README.md"
   ],
   "scripts": {
     "build": "node scripts/build-packages.mjs",
     "prepare": "node scripts/build-packages.mjs",
+    "prepublishOnly": "node scripts/build-packages.mjs",
     "typecheck": "tsc --noEmit -p tsconfig.base.json",
     "test": "vitest run"
   },
   "dependencies": {
-    "@cryptocurpays/dsh-remote-hosts": "file:./packages/remote-hosts",
-    "@cryptocurpays/dsh-remote-hosts-file": "file:./packages/remote-hosts-file",
-    "@cryptocurpays/dsh-remote-hosts-jumpserver": "file:./packages/remote-hosts-jumpserver",
-    "@cryptocurpays/dsh-terminal-ssh": "file:./packages/terminal-ssh",
-    "@cryptocurpays/dsh-tool-remote": "file:./packages/tool-remote",
-    "esbuild": "^0.25.0"
+    "@zealousw/dsh-remote-hosts": "workspace:*",
+    "@zealousw/dsh-remote-hosts-file": "workspace:*",
+    "@zealousw/dsh-remote-hosts-jumpserver": "workspace:*",
+    "@zealousw/dsh-terminal-ssh": "workspace:*",
+    "@zealousw/dsh-tool-remote": "workspace:*"
   },
   "devDependencies": {
+    "esbuild": "^0.25.0",
     "typescript": "^6.0.3",
     "vitest": "^3.2.4"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }

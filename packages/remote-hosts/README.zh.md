@@ -3,7 +3,7 @@ description: "远程主机发现 seam（ctx.remoteHosts）：provider 注册表�
 kind: "package-reference"
 ---
 
-# @cryptocurpays/dsh-remote-hosts
+# @zealousw/dsh-remote-hosts
 
 [English](README.md) | 中文
 
@@ -17,11 +17,11 @@ kind: "package-reference"
 
 | 包 | 角色 |
 |---|---|
-| `@cryptocurpays/dsh-remote-hosts`（本包） | Service Definition：provider 注册表、解析、已知主机字典、活跃会话映射 |
-| `@cryptocurpays/dsh-remote-hosts-jumpserver` | Provider：解析粘贴的 JumpServer SSH 连接命令 |
-| `@cryptocurpays/dsh-remote-hosts-file` | Provider：来自 `~/.dsh/remote-hosts.yaml` 的静态测试服务器 |
-| `@cryptocurpays/dsh-terminal-ssh` | 传输：`ctx.terminals` 的 SSH PTY 后端 |
-| `@cryptocurpays/dsh-tool-remote` | Consumer：面向模型的 `remote_search` / `remote_open` / `remote_exec` / `remote_close` 工具 |
+| `@zealousw/dsh-remote-hosts`（本包） | Service Definition：provider 注册表、解析、已知主机字典、活跃会话映射 |
+| `@zealousw/dsh-remote-hosts-jumpserver` | Provider：解析粘贴的 JumpServer SSH 连接命令 |
+| `@zealousw/dsh-remote-hosts-file` | Provider：来自 `~/.dsh/remote-hosts.yaml` 的静态测试服务器 |
+| `@zealousw/dsh-terminal-ssh` | 传输：`ctx.terminals` 的 SSH PTY 后端 |
+| `@zealousw/dsh-tool-remote` | Consumer：面向模型的 `remote_search` / `remote_open` / `remote_exec` / `remote_close` 工具 |
 
 `RemoteHostSpec` 只携带非机密的连接事实（`name`、`host`、`port`、可选的 `username`）外加一个 `CredentialRef`；凭据值从不进入目录。
 

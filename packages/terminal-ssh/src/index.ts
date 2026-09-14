@@ -6,12 +6,12 @@
  * `ctx.credentials`, and spawns the system `ssh` through
  * `ctx.subprocess.spawnTerminal`.
  *
- * @module @cryptocurpays/dsh-terminal-ssh
+ * @module @zealousw/dsh-terminal-ssh
  */
 
 import type { Context } from '@deepseek-ai/cordis'
 import type { TerminalBackend, TerminalBackendSpawnSpec } from '@deepseek-ai/dsh-terminal'
-import type {} from '@cryptocurpays/dsh-remote-hosts'
+import type {} from '@zealousw/dsh-remote-hosts'
 import { type Config, Config as ConfigSchema, validateConfig } from './config.ts'
 import { SshPtySession } from './session.ts'
 

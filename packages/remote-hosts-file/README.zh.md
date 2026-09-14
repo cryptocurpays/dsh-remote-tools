@@ -3,13 +3,13 @@ description: "ctx.remoteHosts 的文件后端发现 provider：把 YAML 文档�
 kind: "package-reference"
 ---
 
-# @cryptocurpays/dsh-remote-hosts-file
+# @zealousw/dsh-remote-hosts-file
 
 [English](README.md) | 中文
 
 ## 概述
 
-`@cryptocurpays/dsh-remote-hosts` 发现 seam 的 Service Provider：把 YAML 文档里列出的静态测试服务器（`name`、`host`、`port`、`username`、`tokenRef`）变成可解析的主机引用，因此 `remote_open(hostRef: "test01")` 无需粘贴连接命令即可连接。密码从不写入文档——每个条目的 `tokenRef` 引用凭据存储中的一项凭据，由传输层在密码提示处解析，模型永远看不到机密。
+`@zealousw/dsh-remote-hosts` 发现 seam 的 Service Provider：把 YAML 文档里列出的静态测试服务器（`name`、`host`、`port`、`username`、`tokenRef`）变成可解析的主机引用，因此 `remote_open(hostRef: "test01")` 无需粘贴连接命令即可连接。密码从不写入文档——每个条目的 `tokenRef` 引用凭据存储中的一项凭据，由传输层在密码提示处解析，模型永远看不到机密。
 
 不发布不变式 companion：本 provider 在加载时校验文档中的每个条目，且不保留可供 companion 交叉核对的独立运行时状态。
 
@@ -28,7 +28,7 @@ kind: "package-reference"
 
 ```yaml
 - id: remote-hosts-file
-  name: '@cryptocurpays/dsh-remote-hosts-file'
+  name: '@zealousw/dsh-remote-hosts-file'
   config:
     path: ~/.dsh/remote-hosts.yaml   # default: $DSH_HOME/remote-hosts.yaml
 ```

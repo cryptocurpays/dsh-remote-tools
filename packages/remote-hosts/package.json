@@ -1,5 +1,5 @@
 {
-  "name": "@cryptocurpays/dsh-remote-hosts",
+  "name": "@zealousw/dsh-remote-hosts",
   "description": "Remote host discovery seam (ctx.remoteHosts): resolve host references to connection specs via replaceable providers",
   "version": "0.1.0",
   "type": "module",
@@ -19,6 +19,15 @@
     "lib/types/**/*.d.ts"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryptocurpays/dsh-remote-tools.git",
+    "directory": "packages/remote-hosts"
+  },
   "scripts": {
     "build": "node ../../scripts/build-packages.mjs"
   },

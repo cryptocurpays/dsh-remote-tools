@@ -2,13 +2,16 @@ packages:
   - 'packages/*'
 
 allowBuilds:
-  esbuild: set this to true or false
+  esbuild: true
+
+onlyBuiltDependencies:
+  - esbuild
 
 autoInstallPeers: false
 
 peerDependencyRules:
   allowAny:
     - '@deepseek-ai/*'
-    - '@cryptocurpays/*'
+    - '@zealousw/*'
   ignoreMissing:
     - '@deepseek-ai/*'

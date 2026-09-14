@@ -8,25 +8,25 @@ importers:
 
   .:
     dependencies:
-      '@cryptocurpays/dsh-remote-hosts':
-        specifier: file:./packages/remote-hosts
+      '@zealousw/dsh-remote-hosts':
+        specifier: workspace:*
         version: link:packages/remote-hosts
-      '@cryptocurpays/dsh-remote-hosts-file':
-        specifier: file:./packages/remote-hosts-file
-        version: file:packages/remote-hosts-file(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)
-      '@cryptocurpays/dsh-remote-hosts-jumpserver':
-        specifier: file:./packages/remote-hosts-jumpserver
-        version: file:packages/remote-hosts-jumpserver(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)
-      '@cryptocurpays/dsh-terminal-ssh':
-        specifier: file:./packages/terminal-ssh
-        version: file:packages/terminal-ssh(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)
-      '@cryptocurpays/dsh-tool-remote':
-        specifier: file:./packages/tool-remote
-        version: file:packages/tool-remote(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)
+      '@zealousw/dsh-remote-hosts-file':
+        specifier: workspace:*
+        version: link:packages/remote-hosts-file
+      '@zealousw/dsh-remote-hosts-jumpserver':
+        specifier: workspace:*
+        version: link:packages/remote-hosts-jumpserver
+      '@zealousw/dsh-terminal-ssh':
+        specifier: workspace:*
+        version: link:packages/terminal-ssh
+      '@zealousw/dsh-tool-remote':
+        specifier: workspace:*
+        version: link:packages/tool-remote
+    devDependencies:
       esbuild:
         specifier: ^0.25.0
         version: 0.25.12
-    devDependencies:
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -49,52 +49,6 @@ importers:
   packages/tool-remote: {}
 
 packages:
-
-  '@cryptocurpays/dsh-remote-hosts-file@file:packages/remote-hosts-file':
-    resolution: {directory: packages/remote-hosts-file, type: directory}
-    peerDependencies:
-      '@cryptocurpays/dsh-remote-hosts': workspace:*
-      '@deepseek-ai/cordis': '*'
-      '@deepseek-ai/dsh-credentials': '*'
-      '@deepseek-ai/dsh-home-paths': '*'
-      '@deepseek-ai/schemastery': '*'
-
-  '@cryptocurpays/dsh-remote-hosts-jumpserver@file:packages/remote-hosts-jumpserver':
-    resolution: {directory: packages/remote-hosts-jumpserver, type: directory}
-    peerDependencies:
-      '@cryptocurpays/dsh-remote-hosts': workspace:*
-      '@deepseek-ai/cordis': '*'
-      '@deepseek-ai/dsh-credentials': '*'
-      '@deepseek-ai/schemastery': '*'
-
-  '@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts':
-    resolution: {directory: packages/remote-hosts, type: directory}
-    peerDependencies:
-      '@deepseek-ai/cordis': '*'
-      '@deepseek-ai/dsh-credentials': '*'
-
-  '@cryptocurpays/dsh-terminal-ssh@file:packages/terminal-ssh':
-    resolution: {directory: packages/terminal-ssh, type: directory}
-    peerDependencies:
-      '@cryptocurpays/dsh-remote-hosts': workspace:*
-      '@deepseek-ai/cordis': '*'
-      '@deepseek-ai/dsh-agent': '*'
-      '@deepseek-ai/dsh-credentials': '*'
-      '@deepseek-ai/dsh-subprocess': '*'
-      '@deepseek-ai/dsh-terminal': '*'
-      '@deepseek-ai/schemastery': '*'
-
-  '@cryptocurpays/dsh-tool-remote@file:packages/tool-remote':
-    resolution: {directory: packages/tool-remote, type: directory}
-    peerDependencies:
-      '@cryptocurpays/dsh-remote-hosts': workspace:*
-      '@deepseek-ai/cordis': '*'
-      '@deepseek-ai/dsh-agent': '*'
-      '@deepseek-ai/dsh-llm': '*'
-      '@deepseek-ai/dsh-system-prompt': '*'
-      '@deepseek-ai/dsh-terminal': '*'
-      '@deepseek-ai/dsh-tools': '*'
-      '@deepseek-ai/schemastery': '*'
 
   '@esbuild/aix-ppc64@0.25.12':
     resolution: {integrity: sha512-Hhmwd6CInZ3dwpuGTF8fJG6yoWmsToE+vYgD4nytZVxcu1ulHpUQRAB1UJ8+N1Am3Mz4+xOByoQoSZf4D+CpkA==, tarball: https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.25.12.tgz}
@@ -824,25 +778,6 @@ packages:
     hasBin: true
 
 snapshots:
-
-  '@cryptocurpays/dsh-remote-hosts-file@file:packages/remote-hosts-file(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)':
-    dependencies:
-      '@cryptocurpays/dsh-remote-hosts': file:packages/remote-hosts
-      yaml: 2.9.0
-
-  '@cryptocurpays/dsh-remote-hosts-jumpserver@file:packages/remote-hosts-jumpserver(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)':
-    dependencies:
-      '@cryptocurpays/dsh-remote-hosts': file:packages/remote-hosts
-
-  '@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts': {}
-
-  '@cryptocurpays/dsh-terminal-ssh@file:packages/terminal-ssh(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)':
-    dependencies:
-      '@cryptocurpays/dsh-remote-hosts': file:packages/remote-hosts
-
-  '@cryptocurpays/dsh-tool-remote@file:packages/tool-remote(@cryptocurpays/dsh-remote-hosts@file:packages/remote-hosts)':
-    dependencies:
-      '@cryptocurpays/dsh-remote-hosts': file:packages/remote-hosts
 
   '@esbuild/aix-ppc64@0.25.12':
     optional: true
