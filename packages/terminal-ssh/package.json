@@ -1,7 +1,7 @@
 {
   "name": "@cryptocurpays/dsh-terminal-ssh",
   "description": "Generic SSH PTY backend for the DeepSeek Harness terminal seam: resolves host specs via ctx.remoteHosts and spawns system ssh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",

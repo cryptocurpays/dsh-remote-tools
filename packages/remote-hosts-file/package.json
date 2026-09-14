@@ -1,7 +1,7 @@
 {
   "name": "@cryptocurpays/dsh-remote-hosts-file",
   "description": "File-backed discovery provider for ctx.remoteHosts: static test servers listed in a YAML document (name, host, port, username, tokenRef) become resolvable host references",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
