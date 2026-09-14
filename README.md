@@ -20,10 +20,12 @@ Install the bundle into a profile with `dsh plugin add` so every plugin resolves
 
 ```sh
 dsh --profile web-remote --from-default-profile web --dump-config   # create profile, print, exit (no remote-* rows yet)
-dsh plugin --profile web-remote add github:cryptocurpays/dsh-remote-tools
+dsh plugin --profile web-remote add @zealousw/dsh-remote-tools
 dsh --profile web-remote --dump-config   # optional: expect terminal + five remote-* plugin rows
 dsh --profile web-remote
 ```
+
+npm scope is `@zealousw`; the GitHub repository stays `cryptocurpays/dsh-remote-tools`. Before the npm release, install from git instead: `dsh plugin --profile web-remote add github:cryptocurpays/dsh-remote-tools`.
 
 Step-by-step notes: [docs/install.md](docs/install.md). The root package's `prepare` script transpiles each plugin to `lib/index.js` during install.
 

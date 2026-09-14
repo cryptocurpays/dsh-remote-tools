@@ -19,11 +19,13 @@ dsh --profile web-remote --from-default-profile web --dump-config
 
 ## Install the bundle
 
-From any directory, add the GitHub repository (a local checkout or `pnpm pack` tarball also works):
+From any directory, add the published npm bundle (a local checkout, `pnpm pack` tarball, or GitHub spec also works):
 
 ```sh
-dsh plugin --profile web-remote add github:cryptocurpays/dsh-remote-tools
+dsh plugin --profile web-remote add @zealousw/dsh-remote-tools
 ```
+
+npm scope is `@zealousw`. The source repository remains `github:cryptocurpays/dsh-remote-tools` and can be used before the npm release.
 
 `pnpm` runs the bundle's `prepare` script, which transpiles each plugin package to `lib/index.js`. On pnpm ≥10, the first git install may require an `allowBuilds` entry in the profile's `pnpm-workspace.yaml`; copy the key `dsh` prints and re-run the command.
 

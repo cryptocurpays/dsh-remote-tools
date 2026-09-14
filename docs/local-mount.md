@@ -6,9 +6,11 @@
 
 ```sh
 dsh --profile web-remote --from-default-profile web --dump-config
-dsh plugin --profile web-remote add github:cryptocurpays/dsh-remote-tools
+dsh plugin --profile web-remote add @zealousw/dsh-remote-tools
 dsh --profile web-remote
 ```
+
+npm 包名是 `@zealousw/dsh-remote-tools`；GitHub 仓库仍是 `cryptocurpays/dsh-remote-tools`。未发 npm 前可用 `github:cryptocurpays/dsh-remote-tools`。
 
 Web 模板不含 `dsh-terminal`；bundle 的 `cordis.patch.yml` 会插入该 seam。若把 bundle 加到已经手写了 `id: terminal` 的 profile，删掉 profile patch 里的重复行。
 

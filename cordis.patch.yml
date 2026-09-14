@@ -1,5 +1,5 @@
 # Remote-host tools bundle overlay: mount the five packages beside the base.
-# Install:  dsh plugin --profile <name> add github:cryptocurpays/dsh-remote-tools
+# Install:  dsh plugin --profile <name> add @zealousw/dsh-remote-tools
 # Dev overlay:  dsh web --patch ./cordis.patch.yml
 # See docs/install.md.
 #
