@@ -7,7 +7,7 @@ English companion to [README.md](../README.md). Mount the bundle as a profile la
 - A working `dsh` CLI (built or installed from DeepSeek Harness).
 - Node.js matching the harness engines range (^22.19 or >=24).
 
-The terminal `params` extension ships in current upstream `dsh-terminal`; no local patch is required for new harness checkouts.
+This bundle does not patch dsh. Stock `dsh-terminal` does not forward `TerminalSpawnRequest.params`, which SSH needs for `hostRef`. After installing dsh, apply [../patches/terminal-params.patch](../patches/terminal-params.patch) to the dsh checkout you run (see [terminal-params-patch.md](terminal-params-patch.md)), then continue below. Skip only when that checkout already declares `params`.
 
 ## One-time profile setup
 

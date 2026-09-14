@@ -19,7 +19,10 @@
   },
   "files": [
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "patches/terminal-params.patch",
+    "docs/terminal-params-patch.md",
+    "docs/install.md"
   ],
   "scripts": {
     "build": "node scripts/build-packages.mjs",

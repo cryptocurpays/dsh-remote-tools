@@ -1,6 +1,6 @@
 # The `TerminalSpawnRequest.params` extension (local patch)
 
-The only shared-code change this bundle needs; everything else lives out-of-tree. Because upstream's [CONTRIBUTING](https://github.com/deepseek-ai/deepseek-harness/blob/master/CONTRIBUTING.md) does not accept external pull requests while the project is pre-release, this change stays a local patch applied to the installed `dsh-terminal` after every dsh upgrade. `typings/dsh-terminal-params.d.ts` mirrors it so the bundle typechecks against unpatched dsh.
+The only shared-code change this bundle needs; everything else lives out-of-tree. `dsh plugin add` never applies it. Because upstream's [CONTRIBUTING](https://github.com/deepseek-ai/deepseek-harness/blob/master/CONTRIBUTING.md) does not accept external pull requests while the project is pre-release, this change stays a local patch on the **dsh checkout you run**, applied after dsh install and again after every upgrade that lacks `params`. `typings/dsh-terminal-params.d.ts` mirrors it so the bundle typechecks against unpatched dsh.
 
 ## Why it exists
 

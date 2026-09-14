@@ -14,6 +14,19 @@ Out-of-tree dsh bundle: **remote-host tools** — discovery, an SSH terminal bac
 
 `cordis.patch.yml` is the bundle overlay that mounts all five.
 
+## Prerequisite: patch `dsh-terminal` `params`
+
+`dsh plugin add` only installs this bundle. It does **not** modify DeepSeek Harness. SSH still needs `TerminalSpawnRequest.params` so `remote_open` can pass `hostRef` through `ctx.terminals.spawn`. Stock `dsh-terminal` forwards `type` / `name` / `cwd` only; without the field, spawn throws `params.hostRef is required`.
+
+After you install dsh, apply the patch to **the dsh source checkout you actually run**, then rebuild that checkout if you launch from source:
+
+```sh
+cd /path/to/deepseek-harness
+git apply /path/to/dsh-remote-tools/patches/terminal-params.patch
+```
+
+Get the patch from this repo (`patches/terminal-params.patch`); the npm tarball of `@cryptocurpays/dsh-remote-tools` does not replace `dsh-terminal`. Skip the apply only when that checkout's `TerminalSpawnRequest` already declares `params`. Re-apply after every dsh upgrade that drops the field. Details: [docs/terminal-params-patch.md](docs/terminal-params-patch.md).
+
 ## Install (recommended)
 
 Install the bundle into a profile with `dsh plugin add` so every plugin resolves through the profile's `node_modules` without `--patch`:
@@ -40,9 +53,10 @@ dsh web --patch /path/to/dsh-remote-tools/cordis.patch.yml
 ## Upgrade workflow (when a new dsh releases)
 
 1. Pull the new dsh into your environment.
-2. Run this bundle's checks (below).
-3. Fix only if a seam API you use changed (`ctx.tools`, `ctx.terminals`, `ctx.credentials`, `ctx.systemPrompt`) — rare and usually one call site.
-4. Re-install or update the profile bundle: `dsh plugin --profile web-remote update @cryptocurpays/dsh-remote-tools`.
+2. Re-apply `patches/terminal-params.patch` if that upgrade does not already ship `TerminalSpawnRequest.params`.
+3. Run this bundle's checks (below).
+4. Fix only if a seam API you use changed (`ctx.tools`, `ctx.terminals`, `ctx.credentials`, `ctx.systemPrompt`) — rare and usually one call site.
+5. Re-install or update the profile bundle: `dsh plugin --profile web-remote update @cryptocurpays/dsh-remote-tools`.
 
 ## Development
 
